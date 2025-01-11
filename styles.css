@@ -1,0 +1,44 @@
+/* SlideUp Keyframes */
+
+@keyframes slideUp {
+    0%{
+        transform: translateY(50%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/* FadeIn Keyframes */
+
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.YourClass {
+    padding: 8px; /* Start from below */
+    animation: slideUp 500ms, fadein 500ms; /* Animations applied to the element */
+    display: none;
+    color: white;
+}
+
+/* Animations will run when the element appears */
+/* Here, the element will appear when the container is hovered (mouseover) */
+.container:hover .YourClass {
+    display: flex;
+}
+
+/* Ignore this part, it's just the container */
+.container {
+    display: flex;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
